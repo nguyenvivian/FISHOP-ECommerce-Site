@@ -42,6 +42,11 @@ header{
     text-decoration: none;
 }
 
+.left-nav{
+    display: block;
+    text-decoration: none;
+}
+
 .grid-container {
     display: grid;
     grid-template-areas: 'left middle middle middle middle middle middle';
@@ -64,19 +69,29 @@ header{
     grid-area: middle;
 }
 
+.product-header{
+    font-size: x-large;
+    color: #DE5764;
+    padding: 15px;
+}
 .product {
     padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
+    border-bottom: 2px solid grey;
+    
+
 } 
+
 
 .product-card {
     max-height: auto; 
     max-width: 150px;
     text-align: center;
     min-width: 33%; 
+    
 }
 
 .product-card product-name{
