@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FISHOP</title>
+    <link rel="stylesheet" href="product-page.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<!-- BEGIN HEADER -->
+<div>
+    <a href="index.html">
+        <img class=logo src="img/logo.png" alt="logo">
+    </a>
+    <div class="caption">
+        <p>THE #1 FISH SHOP FOR YOUR ALL YOUR FISH NEEDS</p>
+    </div>
+</div>
+
+<div class="nav">
+    <a href="#left-nav">SHOP</a>
+    <a href="about.html">ABOUT US</a>
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN MIDDLE -->
+<div class="listing">
+    <header>API TROPICAL FISH FOOD</header>
+    <header>PURCHASE FORM</header>
+    <div class="picture-carousel">
+        <div class="picture-showcase">
+            <img src="img/fish-food/api-tropical-1.jpg">
+        </div>
+        <div class="picture-showcase">
+            <img src="img/fish-food/api-tropical-2.jpg">
+        </div>
+        <div class="picture-showcase">
+            <img src="img/fish-food/api-tropical-3.jpg">
+        </div>
+
+
+        <a class="prev" onclick="moveSlides(-1)">
+            < </a>
+                <a class="next" onclick="moveSlides(1)">></a>
+    </div>
+    <div>
+        <form>
+            <label for="products">Select Item:</label>
+            <select id="products">
+                <option>API TROPICAL</option>
+            </select>
+
+            <label for="quantity">Quanity:</label>
+            <select id="quantity">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+
+            <!-- todo: change all of these form values to be populated by js list with all products -->
+            <label for="fname">First name:</label>
+            <input type="text" id="fname">
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname">
+            <label for="shipping-address">Shipping Address</label>
+            <input type="text" id="shipping-address">
+            <label for="shipping-method">Shipping Method</label>
+            <input type="text" id="shipping-method">
+            <label for="ccnumber">Credit Card Number:</label>
+            <input type="text" id="ccnumber">
+            <input type="submit">
+
+        </form>
+    </div>
+
+</div>
+<div class="extended-description">
+    <p>Detailed Description: Feed your tropical fish a protein-rich diet scientifically formulated to promote
+        healthy growth and cleaner,
+        clearer water with API TROPICAL FLAKES Optimal Protein Fish Food. Overfeeding, low palatability and low
+        quality lead to unconsumed or poorly digested food which causes waste and raises ammonia levels. High levels
+        of ammonia are toxic to fish and can cause gill damage, stress, illness and death. API TROPICAL FLAKES
+        Optimal Protein Fish Food is a complete and balanced diet ideal for all types of tropical fish including
+        Tetras, Angelfish, Discus, Barbs and Guppies. API Fish Food contains nutritionally-enhanced protein for
+        maximum digestion and produce up to 30% less ammonia. The more nutrients your fish digests, the less waste
+        and ammonia are released, leaving cleaner, clearer water. Plus, they contain menhaden and squid for optimal
+        growth and carotenoids to enhance color. Feed twice a day, and provide only as much as your fish will eat
+        within three minutes. API Fish Food is formulated for a variety of popular fish such as cichlids, goldfish,
+        tetra, betta, angelfish and more with high quality ingredients fish love such as algae, shrimp, worms and
+        more. Keep your fish healthy, happy and colorful with food that contains optimal levels of nutrients as well
+        as helps produce less waste, toxins and stress. For delayed release try API VACATION and WEEKEND PYRAMID
+        FEEDERS.
+
+    </p>
+</div>
+<!-- END MIDDLE -->
+
+<!-- BEGIN FOOTER -->
+<div class="nav">
+    <a1>Name: Vivian Nguyen / UCINetID: nguyev12 / ID #: 84955920 / Machine Number: 27</a1>
+</div>
+<!-- END FOOTER -->
+<script src="main.js"></script>
+
+</html>
