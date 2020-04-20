@@ -11,7 +11,6 @@ header{
     display: block;
     text-align: center;
 }
-
 .logo {
     display: block;
     margin-left: auto;
@@ -68,7 +67,6 @@ header{
     grid-area: middle;
 }
 
-
 .product-header{
     font-size: x-large;
     color: #DE5764;
@@ -107,6 +105,10 @@ header{
     max-width: 150px;
     text-align: center;
     min-width: 33%; 
+}
+
+.product-card a{
+    text-decoration:none;
 }
 
 .product-card product-name{
