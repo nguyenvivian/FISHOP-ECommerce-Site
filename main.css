@@ -84,6 +84,11 @@ header{
     display: flex;
     border-bottom: 2px solid grey;
 } 
+
+.mgmt{
+    max-width: 50%;
+}
+
 .about description-title{
     display: block;
     font-size: x-large;
