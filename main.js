@@ -49,6 +49,7 @@ function checkForm() {
     var postalCode = document.getElementById("postalCode").value;
     var shippingMethod = document.getElementById("shippingMethod").value;
     var ccnumber = document.getElementById("ccnumber").value;
+    var ccv = document.getElementById("ccv").value;
     var errors = [];
 
     for (e of document.getElementById("myForm")) {
@@ -60,11 +61,14 @@ function checkForm() {
         document.getElementById("error").innerHTML = errors;
         return false;
     }
-    if (isNaN(phoneNumber) || phoneNumber.length != 10) {
+    if (isNaN(phoneNumber) || !(phoneNumber.length == 10 || phoneNumber.length == 11)) {
         errors.push(" Invalid Phone Number");
     }
     if (isNaN(ccnumber) || ccnumber.length != 16) {
         errors.push(" Invalid Credit Card Number");
+    }
+    if (isNaN(ccv) || !(ccv.length == 3 || ccv.length == 4)) {
+        errors.push(" Invalid CCV");
     }
     if (isNaN(postalCode) || postalCode.length != 5) {
         errors.push(" Invalid Postal Code.")
@@ -80,7 +84,7 @@ function checkForm() {
         + "%0APhone Number = " + phoneNumber
         + "%0AShipping Address = " + street + " " + city + " " + state + ", " + postalCode
         + "%0AShipping Method = " + shippingMethod
-        + "%0ACredit Card Number = " + ccnumber,
+        + "%0ACredit Card Number = " + ccnumber
+        + "%0ACCV = " + ccv,
         'emailWindow');
-
 }
