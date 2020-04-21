@@ -4,6 +4,7 @@
     grid-column-gap: 10px; 
     background-color: white; 
 }
+
 .listing header{
     grid-row: 1;
     font-size: x-large;
@@ -12,6 +13,13 @@
     color:#DE5764;
     padding-top: 15px;
     padding-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.listing p{
+    text-align: center;
+    color: #DE5764;
+    text-decoration: underline;
 }
 
 .extended-description{
@@ -21,18 +29,27 @@
     background-color: white; 
 }
 
+.error{
+    color:red;
+}
+
 .listing form {
     grid-column: 1;
     margin: auto;
     width: 50%;
-    border: 3px solid #DE5764;
-    
-    padding: 10px;
+    border: 3px solid #DE5764; 
+    padding: 10px;    
 }
 
 .listing img {    
     max-height: 400px;
     width: auto;
+
+}
+
+.listing img:hover{
+    transition: transform .2s;
+    transform: scale(1.1);
 }
 
 .listing input, select{
@@ -51,29 +68,31 @@
     display: none;
 }
 
-/* Next & previous buttons */
 .prev, .next {
-    cursor: pointer;
     position: absolute;
+    padding: 5%;
+    color: white;
+    font-size: 25px;
+    user-select: none;
+    background-color: black;
     top: 50%;
     width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
+}
   
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
+.prev {
+    right: 105%;
+    border-radius: 2px 0 0 2px;
+}
+
+.next {
+    right: -20%;
+    border-radius: 2px 0 0 2px;
+}
+
+.prev:hover, .next:hover {
+    background-color:red;
+}
+
+.option{
+    text-transform: uppercase;
+}

@@ -18,38 +18,27 @@
 </div>
 
 <div class="nav">
-    <a href="#left-nav">SHOP</a>
+    <a href="index.html#left-nav">SHOP</a>
     <a href="about.html">ABOUT US</a>
 </div>
 <!-- END HEADER -->
 
 <!-- BEGIN MIDDLE -->
-<div class="listing">
+<div class="listing" id="img/fish-food/api-tropical">
     <header>API TROPICAL FISH FOOD</header>
     <header>PURCHASE FORM</header>
-    <div class="picture-carousel">
-        <div class="picture-showcase">
-            <img src="img/fish-food/api-tropical-1.jpg">
-        </div>
-        <div class="picture-showcase">
-            <img src="img/fish-food/api-tropical-2.jpg">
-        </div>
-        <div class="picture-showcase">
-            <img src="img/fish-food/api-tropical-3.jpg">
-        </div>
-
-
-        <a class="prev" onclick="moveSlides(-1)">
+    <div class="picture-carousel" id="pictureCarousel">
+        <a class="prev" onclick="showPicture(-1)">
             < </a>
-                <a class="next" onclick="moveSlides(1)">></a>
+                <a class="next" onclick="showPicture(1)">></a>
     </div>
     <div>
-        <form>
+        <form id="myForm" onsubmit="checkForm();return false;">
+            <p class="error" id="error"></p>
             <label for="products">Select Item:</label>
             <select id="products">
                 <option>API TROPICAL</option>
             </select>
-
             <label for="quantity">Quanity:</label>
             <select id="quantity">
                 <option>1</option>
@@ -57,41 +46,47 @@
                 <option>3</option>
                 <option>4</option>
             </select>
-
-            <!-- todo: change all of these form values to be populated by js list with all products -->
             <label for="fname">First name:</label>
             <input type="text" id="fname">
             <label for="lname">Last name:</label>
             <input type="text" id="lname">
-            <label for="shipping-address">Shipping Address</label>
-            <input type="text" id="shipping-address">
-            <label for="shipping-method">Shipping Method</label>
-            <input type="text" id="shipping-method">
-            <label for="ccnumber">Credit Card Number:</label>
+            <label for="phoneNumber">Phone Number (XXXXXXXXXX): </label>
+            <input type="text" id="phoneNumber">
+            <label for="street">Street:</label>
+            <input type="text" id="street">
+            <label for="city">City:</label>
+            <input type="text" id="city">
+            <label for="state">State:</label>
+            <input type="text" id="state">
+            <label for="postalCode">Postal Code (XXXXX):</label>
+            <input type="text" id="postalCode">
+            <label for="shippingMethod">Shipping Method:</label>
+            <select id="shippingMethod">
+                <option>Overnight</option>
+                <option>2 Days Expedited</option>
+                <option>6 Days Ground</option>
+            </select>
+            <label for="ccnumber">Credit Card Number (XXXXXXXXXXXXXXXX):</label>
             <input type="text" id="ccnumber">
-            <input type="submit">
-
+            <input type="submit" id="submit">
         </form>
     </div>
+    <p>PRICE (each): $9.99</p>
 
 </div>
 <div class="extended-description">
-    <p>Detailed Description: Feed your tropical fish a protein-rich diet scientifically formulated to promote
-        healthy growth and cleaner,
-        clearer water with API TROPICAL FLAKES Optimal Protein Fish Food. Overfeeding, low palatability and low
-        quality lead to unconsumed or poorly digested food which causes waste and raises ammonia levels. High levels
-        of ammonia are toxic to fish and can cause gill damage, stress, illness and death. API TROPICAL FLAKES
-        Optimal Protein Fish Food is a complete and balanced diet ideal for all types of tropical fish including
-        Tetras, Angelfish, Discus, Barbs and Guppies. API Fish Food contains nutritionally-enhanced protein for
-        maximum digestion and produce up to 30% less ammonia. The more nutrients your fish digests, the less waste
-        and ammonia are released, leaving cleaner, clearer water. Plus, they contain menhaden and squid for optimal
-        growth and carotenoids to enhance color. Feed twice a day, and provide only as much as your fish will eat
-        within three minutes. API Fish Food is formulated for a variety of popular fish such as cichlids, goldfish,
-        tetra, betta, angelfish and more with high quality ingredients fish love such as algae, shrimp, worms and
-        more. Keep your fish healthy, happy and colorful with food that contains optimal levels of nutrients as well
-        as helps produce less waste, toxins and stress. For delayed release try API VACATION and WEEKEND PYRAMID
-        FEEDERS.
-
+    <p>Detailed Description: GOLDFISH FORMULATION: Specially designed for use as a staple flake food for your goldfish
+        or small koi.
+        COMPLETE DIET: Nutritionally balanced diet for optimal health, color and vitality.
+        ACTIVE LIFE FORMULA: With added antioxidants for healthy cells, select proteins for growth and prebiotics for
+        digestion.
+        CLEANER AND CLEARER WATER FORMULA: Won’t cloud water when used as directed.
+        COLOR ENHANCING: Enhances the goldfish’s naturally brilliant colors.
+        Nutritionally balanced staple food now with ProCare for optimal health
+        Dispenser lids (on select sizes) allow hands-free feeding
+        Easier-to-digest formula yields Tetra's "Cleaner & Clearer Water" guarantee
+        Precise blend of immunostimulants, vitamins, biotin, and Omega-3 fatty acids is custom-designed to strengthen
+        fish's resistance to disease and stress
     </p>
 </div>
 <!-- END MIDDLE -->

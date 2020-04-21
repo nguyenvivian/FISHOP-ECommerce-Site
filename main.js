@@ -1,21 +1,86 @@
-var slideIndex = 1;
-showSlides(slideIndex);
 
-function moveSlides(n) {
-    showSlides(slideIndex += n);
-}
+var pictureIndex = 1;
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("picture-showcase");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+window.onload = function loadPictures() {
+    pictureIndex = 3;
+    var path = document.getElementsByClassName('listing')[0].id
+    var carousel = document.getElementById("pictureCarousel");
+    for (var i = 1; i <= 3; ++i) {
+        var newDiv = document.createElement("div");
+        newDiv.className = "picture-showcase";
+        var newImg = document.createElement("img");
+        newImg.src = path + "-" + i + ".jpg";
+        newDiv.appendChild(newImg);
+        pictureCarousel.appendChild(newDiv);
     }
-    slides[slideIndex - 1].style.display = "block";
+    showPicture(pictureIndex);
+}
+
+function showPicture(direction) {
+    pictureIndex += direction;
+    var pictures = document.getElementsByClassName("picture-showcase");
+    if (pictureIndex > pictures.length) {
+        pictureIndex = 1
+    }
+    if (pictureIndex < 1) {
+        pictureIndex = pictures.length
+    }
+    for (i = 0; i < pictures.length; ++i) {
+        if (i != [pictureIndex - 1]) {
+            pictures[i].style.display = "none";
+        }
+        else {
+            pictures[pictureIndex - 1].style.display = "block";
+        }
+    }
+}
+
+function checkForm() {
+    document.getElementById("error").innerHTML = "";
+
+    var products = document.getElementById("products").value;
+    var quantity = document.getElementById("quantity").value;
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var street = document.getElementById("street").value;
+    var city = document.getElementById("city").value;
+    var state = document.getElementById("state").value;
+    var postalCode = document.getElementById("postalCode").value;
+    var shippingMethod = document.getElementById("shippingMethod").value;
+    var ccnumber = document.getElementById("ccnumber").value;
+    var errors = [];
+
+    for (e of document.getElementById("myForm")) {
+        if (e.value == "" && e.id != "submit") {
+            errors.push(" " + e.id + " cannot be empty");
+        }
+    }
+    if (errors.length > 0) {
+        document.getElementById("error").innerHTML = errors;
+        return false;
+    }
+    if (isNaN(phoneNumber) || phoneNumber.length != 10) {
+        errors.push(" Invalid Phone Number");
+    }
+    if (isNaN(ccnumber) || ccnumber.length != 16) {
+        errors.push(" Invalid Credit Card Number");
+    }
+    if (isNaN(postalCode) || postalCode.length != 5) {
+        errors.push(" Invalid Postal Code.")
+    }
+    if (errors.length > 0) {
+        document.getElementById("error").innerHTML = errors;
+        return false;
+    }
+    window = window.open("mailto:nguyev12@uci.edu?subject=Purchase Form for: " + products
+        + "&body=" + "Quantity = " + quantity
+        + "%0AFirst Name = " + fname
+        + "%0ALast Name = " + lname
+        + "%0APhone Number = " + phoneNumber
+        + "%0AShipping Address = " + street + " " + city + " " + state + ", " + postalCode
+        + "%0AShipping Method = " + shippingMethod
+        + "%0ACredit Card Number = " + ccnumber,
+        'emailWindow');
+
 }
